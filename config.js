@@ -3,17 +3,17 @@
 
 const config = {
   dir: {
-    dist: 'dist/',
+    dist: 'docs/',
     blocks: 'src/blocks/',
     clean: {
       imgs: [
-        'dist/img/**/*',
-        '!dist/img/favicons',
-        '!dist/img/symbols.svg',
-        '!dist/img/sprite.png'
+        'docs/img/**/*',
+        '!docs/img/favicons',
+        '!docs/img/symbols.svg',
+        '!docs/img/sprite.png'
       ],
-      fonts: 'dist/fonts/**/*',
-      pages: 'dist/*.html'
+      fonts: 'docs/fonts/**/*',
+      pages: 'docs/*.html'
     },
     pages: 'src/pages/*.pug',
     pug: [
@@ -23,7 +23,7 @@ const config = {
     pugBlocks: 'src/blocks/**/*.pug',
     styles: {
       src: 'src/scss/style.scss',
-      dist: 'dist/css/',
+      dist: 'docs/css/',
       watch: [
         'src/scss/**/*.scss',
         '!src/scss/helpers/blocks-mixins.scss'
@@ -32,7 +32,7 @@ const config = {
     stylesBlocks: 'src/blocks/**/*.scss',
     scripts: {
       src: 'src/js/app.js',
-      dist: 'dist/js/',
+      dist: 'docs/js/',
       watch: [
         'src/js/**/*.js',
         'src/blocks/**/*.js'
@@ -45,7 +45,7 @@ const config = {
         '!src/img/symbols',
         '!src/img/favicon'
       ],
-      dist: 'dist/img/',
+      dist: 'docs/img/',
       watch: [
         'src/img/**/*',
         '!src/img/favicon/*',
@@ -61,7 +61,7 @@ const config = {
     copy: 'src/assets/**/*',
     favicons: {
       src: 'src/img/favicon/favicon.png',
-      dist: 'dist/img/favicons/'
+      dist: 'docs/img/favicons/'
     }
   }
 };

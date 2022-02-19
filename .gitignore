@@ -9,6 +9,6 @@
 node_modules/
 package-lock.json
 Thumbs.db
-#dist/
+dist/
 faviconData.json
 

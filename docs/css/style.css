@@ -958,13 +958,13 @@ a.btn--disabled {
 }
 .social__link-wrap--fb .social__link {
   background-image: url(../img/sprite.png);
-  background-position: -37px 0px;
+  background-position: 0px -37px;
   width: 36px;
   height: 36px;
 }
 .social__link-wrap--vk .social__link {
   background-image: url(../img/sprite.png);
-  background-position: 0px -37px;
+  background-position: -37px 0px;
   width: 36px;
   height: 36px;
 }
