@@ -1,0 +1,95 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+@use 'sass:color';
+
+.btn {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: none;
+  text-overflow: ellipsis;
+  color: $green;
+  background-color: $white;
+  background-image: none;
+  border: 1px solid $green;
+  border-radius: 26px;
+  transition: background-color $transition-time;
+  cursor: pointer;
+  user-select: none;
+
+  @media (max-width: $screen-xxl - 0.1) {
+    padding: 10px 30px;
+    border-radius: 19px;
+  }
+
+  @media (max-width: $screen-lg - 0.1) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $screen-md - 0.1) {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $white;
+    background-color: color.adjust($green-lighten, $lightness: -10%);
+    border-color: color.adjust($green-lighten, $lightness: -10%);
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: $opacity;
+    color: $text-color;
+    background-color: $gray-lightest;
+    cursor: not-allowed;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  &--green {
+    color: $white;
+    background-color: $green-lighten;
+    border: 1px solid $green-lighten;
+    box-shadow: 0 0 5px 5px rgba(118, 195, 90, 0.39);
+
+    @media (max-width: $screen-md - 0.1) {
+      margin-right: 10px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  &--brown {
+    margin-right: 20px;
+    color: $white;
+    background-color: rgba(22, 12, 11, 0.722);
+    border: 1px solid rgba(22, 12, 11, 0.722);
+
+    @media (max-width: $screen-md - 0.1) {
+      margin-right: 10px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: color.adjust(rgba(22, 12, 11, 0.722), $lightness: -10%);
+      border-color: color.adjust(rgba(22, 12, 11, 0.722), $lightness: -10%);
+    }
+  }
+}

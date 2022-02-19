@@ -1,0 +1,73 @@
+// В этом файле должны быть стили для БЭМ-блока visit, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.visit {
+  $block-name: &; // #{$block-name}__element
+
+  @include container();
+
+  margin-bottom: 75px;
+
+  @media (max-width: $screen-xl - 0.1) {
+    margin-bottom: 20px;
+  }
+
+  .content__title {
+    &:after {
+      background-image: url(../img/visit.png);
+    }
+  }
+
+  &__item {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 20px;
+    border-radius: 30px;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      font-size: 24px;
+      line-height: 28px;
+      padding: 0 20px;
+      text-align: center;
+      color: #e7eef5;
+      transform: translate(-50%, -50%);
+
+      @media (max-width: $screen-xl - 0.1) {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      @media (max-width: $screen-lg - 0.1) {
+        font-size: 17px;
+      }
+
+      @media (max-width: $screen-md - 0.1) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__items-top {
+    @include row-flex();
+
+    .visit__item {
+      @include col();
+      @include size(12);
+      @include size-md(4);
+    }
+  }
+
+  &__items {
+    @include row-flex();
+
+    .visit__item {
+      @include col();
+      @include size(12);
+      @include size-md(6);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+footer.page-footer
+  .page-footer__container
+    .page-footer__inner
+      +logo(false)
+        img(class='logo__image', src='img/logo-new.png', alt='Logo')
+      .page-footer__social
+        span.page-footer__social-title Оставайтесь на связи с нами
+        +social()
+          +social-link('#', 'fb')
+          +social-link('#', 'ins')
+          +social-link('#', 'vk')
+      a.page-footer__phone(href='tel:+78002001000') 7 800 200 100 0
+  .page-footer__copyright Все права защищены &copy; 2022

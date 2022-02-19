@@ -1,0 +1,150 @@
+// В этом файле должны быть стили для БЭМ-блока advantage, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.advantage {
+  @include container();
+
+  margin-bottom: 95px;
+
+  @media (max-width: $screen-xl - 0.1) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $screen-md - 0.1) {
+    margin-bottom: 20px;
+  }
+
+  .content__title {
+    margin-bottom: 0;
+
+    &:after {
+      background-image: url(../img/advantage.png);
+    }
+  }
+
+  .advantage__btn {
+    box-shadow: none;
+  }
+
+  &__info {
+    line-height: 28px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    span {
+      color: $green;
+    }
+
+    strong {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+
+  &__item-title {
+    color: $green;
+
+    @media (max-width: $screen-lg - 0.1) {
+      text-align: center;
+    }
+  }
+
+  &__items {
+    @include row-flex();
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    @include col();
+    @include size(12);
+    @include size-md(6);
+
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 215px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      padding-left: 180px;
+    }
+
+    @media (max-width: $screen-lg - 0.1) {
+      padding-top: 180px;
+      padding-left: 0;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 195px;
+      height: 195px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 10px solid $white;
+      border-radius: 50%;
+      box-shadow: 3.611px 4.792px 159.74px 3.26px rgba(41, 29, 11, 0.08);
+
+      @media (max-width: $screen-xl - 0.1) {
+        width: 160px;
+        height: 160px;
+      }
+
+      @media (max-width: $screen-lg - 0.1) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__item--1:before {
+    background-image:
+      url(../img/advantage-1.png),
+      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  }
+
+  &__item--2:before {
+    background-image:
+      url(../img/advantage-2.png),
+      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  }
+
+  &__item--3:before {
+    background-image:
+      url(../img/advantage-3.png),
+      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  }
+
+  &__item--4:before {
+    background-image:
+      url(../img/advantage-4.png),
+      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  }
+
+  &__item--5:before {
+    background-image:
+      url(../img/advantage-5.png),
+      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  }
+
+  &__item--6:before {
+    background-image:
+      url(../img/advantage-6.png),
+      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  }
+
+  &__btn-wrap {
+    text-align: center;
+  }
+  $block-name: &; // #{$block-name}__element
+}

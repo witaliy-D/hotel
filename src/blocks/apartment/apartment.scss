@@ -1,0 +1,36 @@
+// В этом файле должны быть стили для БЭМ-блока apartment, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.apartment {
+  min-height: 800px;
+  background-color: $pink-lighten;
+  background-image: url('../img/apartment-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  .content__title {
+    &:after {
+      background-image: url(../img/get.png);
+    }
+  }
+  //background-color: rgb(246, 241, 239);
+
+  &__inner {
+    @include container();
+  }
+
+  &__info {
+    max-width: 740px;
+    line-height: 28px;
+  }
+
+  &__slider {
+    margin-top: 20px;
+  }
+
+  &__slogan {
+    display: block;
+    color: $green;
+  }
+  $block-name: &; // #{$block-name}__element
+}

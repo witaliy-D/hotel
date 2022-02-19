@@ -1,0 +1,97 @@
+// В этом файле должны быть стили для БЭМ-блока content, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.content {
+  $block-name: &; // #{$block-name}__element
+
+  padding-top: 100px;
+
+  @media (max-width: $screen-xl - 0.1) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $screen-lg - 0.1) {
+    padding-top: 0;
+  }
+
+  @media (max-width: $screen-md - 0.1) {
+    padding-top: 240px;
+  }
+
+  &__item {
+    padding-top: 100px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      padding-top: 40px;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 85px;
+    color: #291d0b;
+
+    @media (max-width: $screen-xxl - 0.1) {
+      font-size: 45px;
+      padding-top: 33px;
+      padding-bottom: 31px;
+    }
+
+    @media (max-width: $screen-xl - 0.1) {
+      font-size: 40px;
+      padding-top: 39px;
+      padding-bottom: 31px;
+    }
+
+    @media (max-width: $screen-lg - 0.1) {
+      font-size: 35px;
+      padding-top: 30px;
+      padding-bottom: 28px;
+      padding-left: 75px;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding-top: 18px;
+      padding-bottom: 13px;
+      padding-left: 45px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 118px;
+      height: 118px;
+      z-index: 1;
+      background-size: cover;
+
+      @media (max-width: $screen-lg - 0.1) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media (max-width: $screen-md - 0.1) {
+        width: 55px;
+        height: 55px;
+      }
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

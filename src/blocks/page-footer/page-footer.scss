@@ -1,0 +1,96 @@
+// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.page-footer {
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: $pink-lighten;
+
+    @media (max-width: $screen-md - 0.1) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    @include container();
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $screen-md - 0.1) {
+      flex-direction: column;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $screen-lg - 0.1) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      margin-top: 20px;
+    }
+  }
+
+  &__social-title {
+    margin-right: 20px;
+
+    @media (max-width: $screen-lg - 0.1) {
+      font-size: 15px;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    margin-left: 40px;
+    padding-left: 20px;
+    color: $green;
+
+    @media (max-width: $screen-xl - 0.1) {
+      margin-left: 20px;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    &:before {
+      @include sprite($phone);
+
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      color: $green;
+    }
+  }
+
+  &__copyright {
+    @include container();
+
+    line-height: 22px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    text-align: center;
+
+    @media (max-width: $screen-lg - 0.1) {
+      font-size: 15px;
+    }
+  }
+}

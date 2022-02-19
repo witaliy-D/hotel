@@ -1,0 +1,7 @@
+nav.nav-menu#nav
+  +burger('открыть меню', 'nav', 'nav-menu--open')(class='nav-menu__toggle' type='button' id='toggle-button')
+  +logo(false)
+    img(class='logo__image', src='img/logo-new.png', alt='Logo')
+  .nav-menu__inner
+    a.nav-menu__phone(href='tel:+78002001000') 7 800 200 100 0
+    +main-menu('1')(class='nav-menu__list')

@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$fb-name: 'fb';
+$fb-x: 37px;
+$fb-y: 0px;
+$fb-offset-x: -37px;
+$fb-offset-y: 0px;
+$fb-width: 36px;
+$fb-height: 36px;
+$fb-total-width: 89px;
+$fb-total-height: 73px;
+$fb-image: '../img/sprite.png';
+$fb: (37px, 0px, -37px, 0px, 36px, 36px, 89px, 73px, '../img/sprite.png', 'fb');
+$ins-name: 'ins';
+$ins-x: 0px;
+$ins-y: 0px;
+$ins-offset-x: 0px;
+$ins-offset-y: 0px;
+$ins-width: 36px;
+$ins-height: 36px;
+$ins-total-width: 89px;
+$ins-total-height: 73px;
+$ins-image: '../img/sprite.png';
+$ins: (0px, 0px, 0px, 0px, 36px, 36px, 89px, 73px, '../img/sprite.png', 'ins');
+$marker-name: 'marker';
+$marker-x: 74px;
+$marker-y: 0px;
+$marker-offset-x: -74px;
+$marker-offset-y: 0px;
+$marker-width: 15px;
+$marker-height: 19px;
+$marker-total-width: 89px;
+$marker-total-height: 73px;
+$marker-image: '../img/sprite.png';
+$marker: (74px, 0px, -74px, 0px, 15px, 19px, 89px, 73px, '../img/sprite.png', 'marker');
+$phone-big-name: 'phone-big';
+$phone-big-x: 37px;
+$phone-big-y: 37px;
+$phone-big-offset-x: -37px;
+$phone-big-offset-y: -37px;
+$phone-big-width: 24px;
+$phone-big-height: 34px;
+$phone-big-total-width: 89px;
+$phone-big-total-height: 73px;
+$phone-big-image: '../img/sprite.png';
+$phone-big: (37px, 37px, -37px, -37px, 24px, 34px, 89px, 73px, '../img/sprite.png', 'phone-big');
+$phone-name: 'phone';
+$phone-x: 74px;
+$phone-y: 20px;
+$phone-offset-x: -74px;
+$phone-offset-y: -20px;
+$phone-width: 12px;
+$phone-height: 17px;
+$phone-total-width: 89px;
+$phone-total-height: 73px;
+$phone-image: '../img/sprite.png';
+$phone: (74px, 20px, -74px, -20px, 12px, 17px, 89px, 73px, '../img/sprite.png', 'phone');
+$vk-name: 'vk';
+$vk-x: 0px;
+$vk-y: 37px;
+$vk-offset-x: 0px;
+$vk-offset-y: -37px;
+$vk-width: 36px;
+$vk-height: 36px;
+$vk-total-width: 89px;
+$vk-total-height: 73px;
+$vk-image: '../img/sprite.png';
+$vk: (0px, 37px, 0px, -37px, 36px, 36px, 89px, 73px, '../img/sprite.png', 'vk');
+$spritesheet-width: 89px;
+$spritesheet-height: 73px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($fb, $ins, $marker, $phone-big, $phone, $vk);
+$spritesheet: (89px, 73px, '../img/sprite.png', $spritesheet-sprites);
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

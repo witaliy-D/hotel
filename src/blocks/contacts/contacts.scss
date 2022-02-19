@@ -1,0 +1,167 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.contacts {
+  $block-name: &; // #{$block-name}__element
+
+  min-height: 1275px;
+  background-color: $pink-lighten;
+  background-image: url('../img/contacts-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (max-width: $screen-xl - 0.1) {
+    min-height: 1100px;
+  }
+
+  @media (max-width: $screen-lg - 0.1) {
+    padding-bottom: 5px;
+  }
+
+  @media (max-width: $screen-md - 0.1) {
+    min-height: inherit;
+  }
+
+  &__inner {
+    @include container();
+  }
+
+  &__items {
+    @include row-flex();
+
+    margin-bottom: 100px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    @include col();
+    @include size(12);
+    @include size-xl(4);
+    @include size-lg(5);
+    @include size-md(5);
+
+    .content__title {
+      &:after {
+        background-image: url(../img/about.png);
+      }
+    }
+  }
+
+  &__phone {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    color: $brown-lighten;
+
+    &:before {
+      @include sprite($phone);
+
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      color: $brown-lighten;
+    }
+  }
+
+  &__address {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    padding-left: 20px;
+    color: $brown-lighten;
+
+    @media (max-width: $screen-lg - 0.1) {
+      font-size: 14px;
+    }
+
+    &:before {
+      @include sprite($marker);
+
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__map {
+    @include col();
+    @include size(12);
+    @include size-xl(8);
+    @include size-lg(7);
+    @include size-md(7);
+
+    height: 290px;
+    border-radius: 30px;
+    box-shadow: 0 9px 51px 9px rgba(32, 5, 5, 0.08);
+
+    @media (max-width: $screen-md - 0.1) {
+      margin-top: 20px;
+    }
+  }
+
+  &__get {
+    .content__title {
+      margin-bottom: 30px;
+
+      @media (max-width: $screen-md - 0.1) {
+        margin-bottom: 10px;
+      }
+
+      &:after {
+        background-image: url(../img/get.png);
+      }
+    }
+  }
+
+  &__list {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 20px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      font-size: 14px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 10px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background-color: $brown;
+      border-radius: 50%;
+    }
+
+    span {
+      color: $green;
+    }
+  }
+}
