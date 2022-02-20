@@ -3,17 +3,25 @@
 
 .apartment {
   min-height: 800px;
-  background-color: $pink-lighten;
+  padding-bottom: 70px;
+  background-color: rgb(246, 241, 239);
   background-image: url('../img/apartment-bg.jpg');
   background-repeat: no-repeat;
   background-position: top center;
+
+  @media (max-width: $screen-xl - 0.1) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $screen-md - 0.1) {
+    padding-bottom: 20px;
+  }
 
   .content__title {
     &:after {
       background-image: url(../img/get.png);
     }
   }
-  //background-color: rgb(246, 241, 239);
 
   &__inner {
     @include container();
@@ -21,7 +29,7 @@
 
   &__info {
     max-width: 740px;
-    line-height: 28px;
+    line-height: 1.5;
   }
 
   &__slider {
@@ -31,6 +39,75 @@
   &__slogan {
     display: block;
     color: $green;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-md - 0.1) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn {
+      flex-shrink: 0;
+      margin-left: 20px;
+
+      @media (max-width: $screen-md - 0.1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__slider-content-wrapper {
+    position: relative;
+    line-height: 0;
+    padding-bottom: 20px;
+
+    @media (max-width: 1439.9px) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__slider-content {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  &__slider-item {
+    img {
+      margin: 0 auto;
+      border-radius: 10%;
+    }
+  }
+
+  &__arrow {
+    @include sprite($next);
+
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    @media (max-width: 1439.9px) {
+      display: none;
+    }
+
+    &--prev {
+      left: -40px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &--next {
+      right: -40px;
+      transform: translateY(-50%);
+    }
   }
   $block-name: &; // #{$block-name}__element
 }
