@@ -1,2 +1,66 @@
-.reviews.section(id = 'section-6', data-id = 'section-6')
-  h2.content__title  Отзывы
+section.content__item.reviews(id = 'section-6', data-id = 'section-6')
+  h2.content__title
+    span Отзывы
+  span.reviews__info Лучшее по оценке наших Гостей
+  .reviews__best
+    .reviews__best-item
+      .reviews__best-content-wrapper
+        .reviews__best-content
+          span 7.5
+      span.reviews__best-content-info Обслуживание персонала
+
+    .reviews__best-item
+      .reviews__best-content-wrapper
+        .reviews__best-content
+          span 7.9
+      span.reviews__best-content-info Чистота
+
+    .reviews__best-item
+      .reviews__best-content-wrapper
+        .reviews__best-content
+          span 8.0
+      span.reviews__best-content-info Вкусная еда
+
+  span.reviews__info Узнайте что понравилось больше всего
+  .reviews__slider-wrapper
+    .reviews__slider#reviews
+      .reviews__slider-item
+        .reviews__item-top
+          img(src='img/avatar.png', alt='avatar', width='52', height='52')
+          .reviews__user
+            span.reviews__user-name Алексей
+            span.reviews__user-country Россия
+        p.reviews__text Выражаем благодарность персоналу гостиницы. Хочется отметить, что все очень доброжелательные и вежливые, поэтому создается атмосфера хорошего отдыха и отличного настроения. Мы уже дважды здесь.
+        a.reviews__link(href='#') Подробнее
+
+      .reviews__slider-item
+        .reviews__item-top
+          img(src='img/avatar.png', alt='avatar', width='52', height='52')
+          .reviews__user
+            span.reviews__user-name Oksana
+            span.reviews__user-country Россия
+        p.reviews__text Отличная гостиница. Все чисто, уютно, сделано со вкусом. Приятный дизайн, новая мебель, белоснежные пушистые полотенца. Персонал вежливый и дружелюбный. Была приятно удивлена бесплатным вай-фаем.
+        a.reviews__link(href='#') Подробнее
+
+      .reviews__slider-item
+        .reviews__item-top
+          img(src='img/avatar.png', alt='avatar', width='52', height='52')
+          .reviews__user
+            span.reviews__user-name Deleroque
+            span.reviews__user-country Россия
+        p.reviews__text Благодарю за создание такой комфортной гостиницы. В номере новая мебель, удобная кровать, телевизор, холодильник, фен. Чисто. Микроволновая печь на этаже, в целом, есть все, что необходимо. Доволен, что остановился
+        a.reviews__link(href='#') Подробнее
+
+      .reviews__slider-item
+        .reviews__item-top
+          img(src='img/avatar.png', alt='avatar', width='52', height='52')
+          .reviews__user
+            span.reviews__user-name Deleroque
+            span.reviews__user-country Россия
+        p.reviews__text Благодарю за создание такой комфортной гостиницы. В номере новая мебель, удобная кровать, телевизор, холодильник, фен. Чисто. Микроволновая печь на этаже, в целом, есть все, что необходимо. Доволен, что остановился
+        a.reviews__link(href='#') Подробнее
+
+    button.reviews__arrow.reviews__arrow--next#reviews-next(type='button')
+    button.reviews__arrow.reviews__arrow--prev#reviews-prev(type='button')
+  .reviews__btn-wrap
+    +btn('Оставить отзыв', 'green')(href='#', class='reviews__btn')

@@ -48,12 +48,12 @@ const slider6 = $('#slider-6');
 
 slider1.slick(sliderSetings);
 
-$('#apartment-next-1').on('click', function (event) {
+$('#apartment-prev-1').on('click', function (event) {
   event.preventDefault();
   slider1.slick('slickPrev');
 });
 
-$('#apartment-prev-1').on('click', function (event) {
+$('#apartment-next-1').on('click', function (event) {
   event.preventDefault();
   slider1.slick('slickNext');
 });
@@ -62,60 +62,60 @@ $('#apartment-prev-1').on('click', function (event) {
 
 slider2.slick(sliderSetings);
 
-$('#apartment-next-2').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickPrev');
-});
-
 $('#apartment-prev-2').on('click', function (event) {
   event.preventDefault();
-  slider1.slick('slickNext');
+  slider2.slick('slickPrev');
+});
+
+$('#apartment-next-2').on('click', function (event) {
+  event.preventDefault();
+  slider2.slick('slickNext');
 });
 
 slider3.slick(sliderSetings);
 
-$('#apartment-next-3').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickPrev');
-});
-
 $('#apartment-prev-3').on('click', function (event) {
   event.preventDefault();
-  slider1.slick('slickNext');
+  slider3.slick('slickPrev');
+});
+
+$('#apartment-next-3').on('click', function (event) {
+  event.preventDefault();
+  slider3.slick('slickNext');
 });
 
 slider4.slick(sliderSetings);
 
-$('#apartment-next-4').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickPrev');
-});
-
 $('#apartment-prev-4').on('click', function (event) {
   event.preventDefault();
-  slider1.slick('slickNext');
+  slider4.slick('slickPrev');
+});
+
+$('#apartment-next-4').on('click', function (event) {
+  event.preventDefault();
+  slider4.slick('slickNext');
 });
 
 slider5.slick(sliderSetings);
 
-$('#apartment-next-5').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickPrev');
-});
-
 $('#apartment-prev-5').on('click', function (event) {
   event.preventDefault();
-  slider1.slick('slickNext');
+  slider5.slick('slickPrev');
+});
+
+$('#apartment-next-5').on('click', function (event) {
+  event.preventDefault();
+  slider5.slick('slickNext');
 });
 
 slider6.slick(sliderSetings);
 
-$('#apartment-next-6').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickPrev');
-});
-
 $('#apartment-prev-6').on('click', function (event) {
   event.preventDefault();
-  slider1.slick('slickNext');
+  slider6.slick('slickPrev');
+});
+
+$('#apartment-next-6').on('click', function (event) {
+  event.preventDefault();
+  slider6.slick('slickNext');
 });

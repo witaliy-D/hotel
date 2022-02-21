@@ -1,8 +1,207 @@
 // В этом файле должны быть стили для БЭМ-блока reviews, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
-.reviews {
-  $block-name: &; // #{$block-name}__element
+@use 'sass:color';
 
-  min-height: 500px;
+.reviews {
+  @include container();
+
+  margin-bottom: 95px;
+
+  @media (max-width: $screen-xl - 0.1) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $screen-md - 0.1) {
+    margin-bottom: 20px;
+  }
+
+  .content__title {
+    &:after {
+      background-image: url(../img/visit.png);
+    }
+  }
+
+  .reviews__btn {
+    box-shadow: none;
+  }
+
+  .slick-slide {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    //height: inherit;
+
+    & > div {
+      //height: 100%;
+    }
+  }
+
+  .slick-track {
+    //display: flex;
+  }
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+  &__info {
+    color: $green;
+  }
+
+  &__best {
+    @include row-flex();
+  }
+
+  &__best-item {
+    @include col();
+    @include size(12);
+    @include size-md(4);
+  }
+
+  &__best-content-wrapper {
+    height: 4px;
+    background-color: rgb(170, 180, 175);
+  }
+
+  &__best-content {
+    position: relative;
+    width: 74%;
+    height: 100%;
+    margin-top: 40px;
+    background-color: $green;
+
+    span {
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: 10px;
+      transform: translateX(50%);
+    }
+  }
+
+  &__best-content-info {
+    display: block;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      font-size: 17px;
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+
+    @media (max-width: 1439.9px) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  &__slider-item {
+    height: 100%;
+    padding: 20px 20px 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px 5px rgba(32, 5, 5, 0.08);
+  }
+
+  &__item-top {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  &__user {
+    margin-left: 10px;
+  }
+
+  &__user-name {
+    display: block;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $screen-md - 0.1) {
+      font-size: 17px;
+    }
+  }
+
+  &__user-country {
+    display: block;
+  }
+
+  &__text {
+    display: box; /* Включаем флексбоксы */
+    overflow: hidden;
+    -webkit-line-clamp: 5; /* Число отображаемых строк /none */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+
+    @media (max-width: $screen-lg - 0.1) {
+      -webkit-line-clamp: 4;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $green-lighten;
+
+    &:hover,
+    &:focus {
+      color: color.adjust($green-lighten, $lightness: -15%);
+    }
+
+    &.open {
+      height: 0;
+      font-size: 0;
+    }
+  }
+
+  &__arrow {
+    @include sprite($next);
+
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    @media (max-width: 1439.9px) {
+      display: none;
+    }
+
+    &--prev {
+      left: -40px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &--next {
+      right: -40px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btn-wrap {
+    text-align: center;
+  }
+  $block-name: &; // #{$block-name}__element
 }

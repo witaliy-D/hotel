@@ -13,6 +13,7 @@ import '../blocks/nav-menu/nav-menu';
 import '../blocks/main-menu/main-menu';
 import '../blocks/contacts/contacts';
 import '../blocks/apartment/apartment';
+import '../blocks/reviews/reviews';
 
 
 
