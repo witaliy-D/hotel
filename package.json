@@ -59,7 +59,7 @@
     "stylelint-selector-bem-pattern": "^2.1.1",
     "webp-in-css": "^0.7.0",
     "webpack": "^5.68.0",
-    "webpack-stream": "^7.0.0",
+    "webpack-stream": "^6.1.2",
     "yargs": "^17.3.1"
   },
   "dependencies": {
@@ -77,7 +77,7 @@
     "prod": "gulp prod --production",
     "clear": "gulp cacheClear",
     "lint": "stylelint src/**/*.scss --fix --config .stylelintrc-format",
-    "eslint": "eslint *.js --fix",
+    "eslint": "eslint src/**/*.js --fix",
     "puglint": "gulp pugLint",
     "pre-commit": "lint-staged",
     "prepare": "husky install"

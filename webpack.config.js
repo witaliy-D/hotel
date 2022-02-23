@@ -13,11 +13,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/js')
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all'
-  //   }
-  // },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
 
   module: {
     rules: [
