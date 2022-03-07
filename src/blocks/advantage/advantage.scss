@@ -16,14 +16,14 @@
 
   .content__title {
     margin-bottom: 0;
-
-    &:after {
-      background-image: url(../img/advantage.png);
-    }
   }
 
   .advantage__btn {
     box-shadow: none;
+  }
+
+  &__title-icon {
+    background-image: url(../img/advantage.png);
   }
 
   &__info {

@@ -12,10 +12,8 @@
     margin-bottom: 20px;
   }
 
-  .content__title {
-    &:after {
-      background-image: url(../img/visit.png);
-    }
+  &__title-icon {
+    background-image: url(../img/visit.png);
   }
 
   &__item {

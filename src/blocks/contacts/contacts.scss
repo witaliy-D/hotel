@@ -40,18 +40,20 @@
     }
   }
 
+  &__title-icon {
+    background-image: url(../img/about.png);
+  }
+
+  &__title-icon--mod {
+    background-image: url(../img/get.png);
+  }
+
   &__info {
     @include col();
     @include size(12);
     @include size-xl(4);
     @include size-lg(5);
     @include size-md(5);
-
-    .content__title {
-      &:after {
-        background-image: url(../img/about.png);
-      }
-    }
   }
 
   &__phone {
@@ -122,10 +124,6 @@
 
       @media (max-width: $screen-md - 0.1) {
         margin-bottom: 10px;
-      }
-
-      &:after {
-        background-image: url(../img/get.png);
       }
     }
   }

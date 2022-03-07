@@ -13,6 +13,10 @@
     box-shadow: none;
   }
 
+  &__title-icon {
+    background-image: url(../img/about.png);
+  }
+
   &__inner {
     @include container();
   }
@@ -25,12 +29,6 @@
     @include col();
     @include size(12);
     @include size-md(7);
-
-    .content__title {
-      &:after {
-        background-image: url(../img/about.png);
-      }
-    }
   }
 
   &__info {

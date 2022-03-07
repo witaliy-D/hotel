@@ -17,10 +17,8 @@
     padding-bottom: 20px;
   }
 
-  .content__title {
-    &:after {
-      background-image: url(../img/get.png);
-    }
+  &__title-icon {
+    background-image: url(../img/get.png);
   }
 
   &__inner {

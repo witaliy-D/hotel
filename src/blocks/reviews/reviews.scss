@@ -16,12 +16,6 @@
     margin-bottom: 20px;
   }
 
-  .content__title {
-    &:after {
-      background-image: url(../img/visit.png);
-    }
-  }
-
   .reviews__btn {
     box-shadow: none;
   }
@@ -33,6 +27,10 @@
 
   .slick-dots {
     bottom: 0;
+  }
+
+  &__title-icon {
+    background-image: url(../img/visit.png);
   }
 
   &__info {
