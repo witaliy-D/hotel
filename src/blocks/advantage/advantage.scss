@@ -69,78 +69,51 @@
     @include size(12);
     @include size-md(6);
 
-    position: relative;
+    display: flex;
     margin-bottom: 20px;
-    padding-left: 215px;
-
-    @media (max-width: $screen-xl - 0.1) {
-      padding-left: 180px;
-    }
 
     @media (max-width: $screen-lg - 0.1) {
-      padding-top: 180px;
-      padding-left: 0;
-    }
-
-    &:before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 195px;
-      height: 195px;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: 10px solid $white;
-      border-radius: 50%;
-      box-shadow: 3.611px 4.792px 159.74px 3.26px rgba(41, 29, 11, 0.08);
-
-      @media (max-width: $screen-xl - 0.1) {
-        width: 160px;
-        height: 160px;
-      }
-
-      @media (max-width: $screen-lg - 0.1) {
-        left: 50%;
-        transform: translateX(-50%);
-      }
+      flex-direction: column;
+      align-items: center;
     }
   }
 
-  &__item--1:before {
+  &__item-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 194px;
+    height: 194px;
     background-image:
-      url(../img/advantage-1.png),
-      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+ radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+    border: 10px solid $white;
+    border-radius: 50%;
+    box-shadow: 3.611px 4.792px 159.74px 3.26px rgba(41, 29, 11, 0.08);
+
+    @media (max-width: $screen-xl - 0.1) {
+      width: 160px;
+      height: 160px;
+    }
   }
 
-  &__item--2:before {
-    background-image:
-      url(../img/advantage-2.png),
-      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+  &__item-img {
+    width: 104px;
+    height: 104px;
+
+    @media (max-width: $screen-xl - 0.1) {
+      width: 90px;
+      height: 90px;
+    }
   }
 
-  &__item--3:before {
-    background-image:
-      url(../img/advantage-3.png),
-      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
-  }
+  &__item-text {
+    margin-left: 20px;
 
-  &__item--4:before {
-    background-image:
-      url(../img/advantage-4.png),
-      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
-  }
-
-  &__item--5:before {
-    background-image:
-      url(../img/advantage-5.png),
-      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
-  }
-
-  &__item--6:before {
-    background-image:
-      url(../img/advantage-6.png),
-      radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 70%, rgb(233, 231, 229) 100%);
+    @media (max-width: $screen-lg - 0.1) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
   }
 
   &__btn-wrap {

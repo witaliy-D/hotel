@@ -37,14 +37,22 @@
     color: $green;
 
     @media (max-width: $screen-md - 0.1) {
-      @include sprite($phone-big);
-
       font-size: 0;
+      line-height: 0;
     }
 
     &:hover,
     &:focus {
       color: $green;
+    }
+  }
+
+  &__phone-icon {
+    width: 24px;
+    height: 34px;
+
+    @media (min-width: $screen-md) {
+      display: none;
     }
   }
 
