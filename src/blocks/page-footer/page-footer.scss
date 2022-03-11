@@ -49,11 +49,10 @@
   }
 
   &__phone {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     font-weight: 700;
     margin-left: 40px;
-    padding-left: 20px;
     color: $green;
 
     @media (max-width: $screen-xl - 0.1) {
@@ -65,20 +64,16 @@
       margin-left: 0;
     }
 
-    &:before {
-      @include sprite($phone);
-
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }
-
     &:hover,
     &:focus {
       color: $green;
     }
+  }
+
+  &__phone-icon {
+    width: 12px;
+    height: 17px;
+    margin-right: 8px;
   }
 
   &__copyright {
