@@ -22,17 +22,21 @@
 
   &__link {
     display: block;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-    #{$block-name}__link-wrap--fb & {
-      @include sprite($fb);
-    }
+  &__link--fb {
+    background-image: url(../img/fb.png);
+  }
 
-    #{$block-name}__link-wrap--vk & {
-      @include sprite($vk);
-    }
+  &__link--ins {
+    background-image: url(../img/ins.png);
+  }
 
-    #{$block-name}__link-wrap--ins & {
-      @include sprite($ins);
-    }
+  &__link--vk {
+    background-image: url(../img/vk.png);
   }
 }

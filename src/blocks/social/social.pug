@@ -48,10 +48,10 @@ mixin social-link(link, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' social__link-wrap--' + modsList[i].trim();
+        allMods = allMods + ' social__link--' + modsList[i].trim();
       }
     }
 
-  li.social__link-wrap(class=allMods)&attributes(attributes)
-    a.social__link(href=link)
+  li.social__link-wrap
+    a.social__link(href=link)(class=allMods)&attributes(attributes)
       block
