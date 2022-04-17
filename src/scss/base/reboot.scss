@@ -19,12 +19,18 @@
 }
 
 html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // stylelint-disable-line
   -webkit-text-size-adjust: 100%; // stylelint-disable-line
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
+  min-height: 100vh;
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;

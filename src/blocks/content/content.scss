@@ -4,6 +4,7 @@
 .content {
   $block-name: &; // #{$block-name}__element
 
+  flex-grow: 1;
   padding-top: 100px;
 
   @media (max-width: $screen-xl - 0.1) {
