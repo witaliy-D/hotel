@@ -83,13 +83,14 @@
   }
 
   &__arrow {
-    @include sprite($next);
-
     position: absolute;
     top: 50%;
+    width: 16px;
+    height: 27px;
     padding: 0;
     z-index: 2;
     background-color: transparent;
+    background-image: url('../img/next.png');
     border: 0;
     cursor: pointer;
 
