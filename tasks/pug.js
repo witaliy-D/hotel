@@ -60,7 +60,7 @@ gulp.task('pugFast', () => {
     .pipe(gulpif(production, replace('.css', '.min.css')))
     .pipe(gulpif(production, replace('.js', '.min.js')))
     .pipe(debug({title: 'pug'}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(dir.dist));
 });
 
 gulp.task('pugLint', () => (

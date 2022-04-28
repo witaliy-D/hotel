@@ -5,8 +5,12 @@ section.content__item.contacts(id = 'section-7', data-id = 'section-7')
         h2.content__title
           span.content__title-text Контакты
           span.content__title-icon.contacts__title-icon
-        a.contacts__phone(href='tel:+78002001000') 7 800 200 100 0
-        address.contacts__address Москва, Волоколамское ш., 30, c. 1
+        a.contacts__phone(href='tel:+78002001000')
+          img.contacts__phone-icon(src='img/phone.png' alt='phone-icon')
+          | 7 800 200 100 0
+        address.contacts__address
+          img.contacts__marker-icon(src='img/marker.png' alt='marker')
+          | Москва, Волоколамское ш., 30, c. 1
       .contacts__map
     .contacts__get
       h2.content__title

@@ -17,6 +17,10 @@
     padding-bottom: 20px;
   }
 
+  &__title span {
+    display: block;
+  }
+
   &__title-icon {
     background-image: url(../img/get.png);
   }

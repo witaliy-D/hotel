@@ -7,7 +7,7 @@ gulp.task('default', gulp.series(
   gulp.parallel('clean', 'writePugMixinsFile', 'writeSassImportsFile'),
   gulp.parallel(
     'fonts',
-    'sprite',
+    // 'sprite',
     // 'symbols',
     // 'favicons',
     // 'webp'
@@ -20,7 +20,7 @@ gulp.task('prod', gulp.series(
   gulp.parallel('clean', 'writePugMixinsFile', 'writeSassImportsFile'),
   gulp.parallel(
     'fonts',
-    'sprite',
+    // 'sprite',
     // 'symbols',
     // 'favicons',
     // 'webp'

@@ -9,33 +9,22 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
-$marker-name: 'marker';
-$marker-x: 0px;
-$marker-y: 0px;
-$marker-offset-x: 0px;
-$marker-offset-y: 0px;
-$marker-width: 15px;
-$marker-height: 19px;
-$marker-total-width: 28px;
-$marker-total-height: 19px;
-$marker-image: '../img/sprite.png';
-$marker: (0px, 0px, 0px, 0px, 15px, 19px, 28px, 19px, '../img/sprite.png', 'marker');
 $phone-name: 'phone';
-$phone-x: 16px;
+$phone-x: 0px;
 $phone-y: 0px;
-$phone-offset-x: -16px;
+$phone-offset-x: 0px;
 $phone-offset-y: 0px;
 $phone-width: 12px;
 $phone-height: 17px;
-$phone-total-width: 28px;
-$phone-total-height: 19px;
+$phone-total-width: 12px;
+$phone-total-height: 17px;
 $phone-image: '../img/sprite.png';
-$phone: (16px, 0px, -16px, 0px, 12px, 17px, 28px, 19px, '../img/sprite.png', 'phone');
-$spritesheet-width: 28px;
-$spritesheet-height: 19px;
+$phone: (0px, 0px, 0px, 0px, 12px, 17px, 12px, 17px, '../img/sprite.png', 'phone');
+$spritesheet-width: 12px;
+$spritesheet-height: 17px;
 $spritesheet-image: '../img/sprite.png';
-$spritesheet-sprites: ($marker, $phone);
-$spritesheet: (28px, 19px, '../img/sprite.png', $spritesheet-sprites);
+$spritesheet-sprites: ($phone);
+$spritesheet: (12px, 17px, '../img/sprite.png', $spritesheet-sprites);
 
 // The provided mixins are intended to be used with the array-like variables
 //

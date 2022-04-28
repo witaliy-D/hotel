@@ -37,85 +37,18 @@ const sliderSetings = {
   responsive: sliderResponsive
 };
 
-const slider1 = $('#slider-1');
-const slider2 = $('#slider-2');
-const slider3 = $('#slider-3');
-const slider4 = $('#slider-4');
-const slider5 = $('#slider-5');
-const slider6 = $('#slider-6');
 
+$('.apartment .apartment__slider-content').each(function () {
+  $(this).slick(sliderSetings);
 
+  $(this).siblings('.apartment__arrow--prev').on('click', function (event) {
+    event.preventDefault();
+    $(this).siblings('.apartment__slider-content').slick('slickPrev');
+  });
 
-slider1.slick(sliderSetings);
+  $(this).siblings('.apartment__arrow--next').on('click', function (event) {
+    event.preventDefault();
+    $(this).siblings('.apartment__slider-content').slick('slickNext');
+  });
 
-$('#apartment-prev-1').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickPrev');
-});
-
-$('#apartment-next-1').on('click', function (event) {
-  event.preventDefault();
-  slider1.slick('slickNext');
-});
-
-
-
-slider2.slick(sliderSetings);
-
-$('#apartment-prev-2').on('click', function (event) {
-  event.preventDefault();
-  slider2.slick('slickPrev');
-});
-
-$('#apartment-next-2').on('click', function (event) {
-  event.preventDefault();
-  slider2.slick('slickNext');
-});
-
-slider3.slick(sliderSetings);
-
-$('#apartment-prev-3').on('click', function (event) {
-  event.preventDefault();
-  slider3.slick('slickPrev');
-});
-
-$('#apartment-next-3').on('click', function (event) {
-  event.preventDefault();
-  slider3.slick('slickNext');
-});
-
-slider4.slick(sliderSetings);
-
-$('#apartment-prev-4').on('click', function (event) {
-  event.preventDefault();
-  slider4.slick('slickPrev');
-});
-
-$('#apartment-next-4').on('click', function (event) {
-  event.preventDefault();
-  slider4.slick('slickNext');
-});
-
-slider5.slick(sliderSetings);
-
-$('#apartment-prev-5').on('click', function (event) {
-  event.preventDefault();
-  slider5.slick('slickPrev');
-});
-
-$('#apartment-next-5').on('click', function (event) {
-  event.preventDefault();
-  slider5.slick('slickNext');
-});
-
-slider6.slick(sliderSetings);
-
-$('#apartment-prev-6').on('click', function (event) {
-  event.preventDefault();
-  slider6.slick('slickPrev');
-});
-
-$('#apartment-next-6').on('click', function (event) {
-  event.preventDefault();
-  slider6.slick('slickNext');
 });
